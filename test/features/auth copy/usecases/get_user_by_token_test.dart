@@ -13,11 +13,10 @@ class MockUserRepository extends Mock implements UserRepository {
         Invocation.method(#getUserbyToken, [token]),
         returnValue: Future<Either<Failure, User>>.value(
           const Right(User(
-            email: 'test@gmail.com',
-            id: 1,
-            imageUrl: 'test.com/url',
-            name: 'test test',
-          )),
+              email: 'test@gmail.com',
+              id: 1,
+              imageUrl: 'test.com/url',
+              name: 'test test')),
         ),
       );
 }
@@ -33,11 +32,10 @@ void main() {
 
   const tToken = '1';
   const tUser = User(
-    email: 'test@gmail.com',
-    id: 1,
-    imageUrl: 'test.com/url',
-    name: 'test test',
-  );
+      email: 'test@gmail.com',
+      id: 1,
+      imageUrl: 'test.com/url',
+      name: 'test test');
 
   test(
     'should get user by id for the repository',

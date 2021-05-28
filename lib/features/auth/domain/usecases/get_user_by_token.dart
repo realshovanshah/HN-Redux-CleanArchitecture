@@ -5,9 +5,8 @@ import 'package:newsletter_reader/features/auth/domain/entities/user.dart';
 import '../repositories/user_repository.dart';
 
 class GetUserByToken {
+  const GetUserByToken(this.repository);
   final UserRepository repository;
-
-  GetUserByToken(this.repository);
 
   Future<Either<Failure, User>> execute({
     required String token,
