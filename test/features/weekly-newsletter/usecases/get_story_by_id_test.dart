@@ -2,9 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:newsletter_reader/core/errors/failures.dart';
+import 'package:newsletter_reader/core/usecases/usecase.dart';
 import 'package:newsletter_reader/features/weekly-newsletter/domain/entities/hacker_news.dart';
 import 'package:newsletter_reader/features/weekly-newsletter/domain/repositories/news_repository.dart';
-import 'package:newsletter_reader/features/weekly-newsletter/domain/usecases/get_news_by_id.dart';
+import 'package:newsletter_reader/features/weekly-newsletter/domain/usecases/get_story_by_id.dart';
 
 class MockStoryRepository extends Mock implements NewsRepository {
   @override
@@ -35,7 +36,7 @@ void main() {
       when(mockStoryRepository.getStorybyId(any))
           .thenAnswer((_) async => const Right(tStory));
 
-      final result = await usecase.execute(id: tToken);
+      final result = await usecase(const Params(id: tToken));
 
       expect(result, const Right(tStory));
 

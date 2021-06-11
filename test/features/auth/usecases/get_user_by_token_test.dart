@@ -45,7 +45,7 @@ void main() {
       when(mockUserRepository.getUserbyToken(any))
           .thenAnswer((_) async => const Right(tUser));
 
-      final result = await usecase.execute(token: tToken);
+      final result = await usecase(const Params(token: tToken));
 
       expect(result, const Right(tUser));
 
