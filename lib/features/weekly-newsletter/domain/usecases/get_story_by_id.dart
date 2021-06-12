@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:newsletter_reader/core/errors/failures.dart';
 import 'package:newsletter_reader/core/usecases/usecase.dart';
-import 'package:newsletter_reader/features/weekly-newsletter/domain/entities/hacker_news.dart';
+import 'package:newsletter_reader/features/weekly-newsletter/domain/entities/hacker_story.dart';
 
 import '../repositories/news_repository.dart';
 

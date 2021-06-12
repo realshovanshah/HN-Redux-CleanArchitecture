@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:newsletter_reader/core/errors/failures.dart';
 import 'package:newsletter_reader/core/usecases/usecase.dart';
-import 'package:newsletter_reader/features/weekly-newsletter/domain/entities/hacker_news.dart';
+import 'package:newsletter_reader/features/weekly-newsletter/domain/entities/hacker_story.dart';
 import 'package:newsletter_reader/features/weekly-newsletter/domain/repositories/news_repository.dart';
 import 'package:newsletter_reader/features/weekly-newsletter/domain/usecases/get_story_by_id.dart';
 
